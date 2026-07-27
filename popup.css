@@ -39,6 +39,29 @@ header {
 .brand-copy { min-width: 0; flex: 1; }
 h1 { margin: 0; font-size: 18px; line-height: 1; letter-spacing: -.25px; }
 header p { margin: 4px 0 0; color: rgba(255,255,255,.86); font-size: 11px; }
+.language-switch {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 2px;
+  padding: 2px;
+  border: 1px solid rgba(255,255,255,.55);
+  border-radius: 7px;
+  background: rgba(0,0,0,.12);
+}
+.language-switch button {
+  min-width: 27px;
+  height: 23px;
+  padding: 0 5px;
+  border: 0;
+  border-radius: 5px;
+  color: rgba(255,255,255,.82);
+  background: transparent;
+  cursor: pointer;
+  font-size: 9px;
+  font-weight: 800;
+}
+.language-switch button[aria-pressed="true"] { color: var(--red); background: #fff; }
+.language-switch button:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
 .control-card, .rate-card, .ad-banner {
   border: 1px solid var(--line);
   border-radius: 12px;

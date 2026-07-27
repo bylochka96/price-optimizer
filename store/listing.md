@@ -14,7 +14,7 @@ Shopping
 
 ## Language
 
-English
+English (popup also supports Turkish)
 
 ## Detailed description
 
@@ -28,6 +28,7 @@ Features:
 - Preserves the site's typography and layout.
 - Uses exchange-rate data from central-bank sources when available, with an HTTPS fallback provider.
 - Lets the user enable or disable conversion at any time.
+- Includes an English/Turkish popup language switcher.
 - Clearly labels the optional contextual sponsored banner in the popup.
 
 Price conversion happens locally in the browser. Product names, prices, page contents, URLs, and browsing history are not sent to the developer or advertisers. The sponsored campaign is not personalized and is not selected using product information or browsing behavior.

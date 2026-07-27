@@ -1,11 +1,11 @@
 {
   "name": "price-optimizer-extension",
-  "version": "2.2.1",
+  "version": "2.3.0",
   "private": true,
   "description": "Build helpers for Price Optimizer Chrome Web Store assets.",
   "scripts": {
     "assets": "node scripts/generate-store-assets.js",
-    "validate": "node --check background.js && node --check content.js && node --check popup.js && node tests/background-navigation.test.js"
+    "validate": "node --check background.js && node --check content.js && node --check popup.js && node tests/background-navigation.test.js && node tests/localization-settings.test.js"
   },
   "devDependencies": {
     "sharp": "0.34.5"

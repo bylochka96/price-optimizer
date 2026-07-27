@@ -35,7 +35,7 @@ async function buildScreenshot() {
     <text class="ui body" x="478" y="424" fill="#171717">$2,118.30</text>
     <text class="ui body" x="84" y="525" fill="#fff">• 11 selected currencies</text>
     <text class="ui body" x="84" y="574" fill="#fff">• Dynamic MediaMarkt price support</text>
-    <text class="ui body" x="84" y="623" fill="#fff">• Manual on/off control</text>
+    <text class="ui body" x="84" y="623" fill="#fff">• English and Turkish popup</text>
     <text class="ui small" x="84" y="704" fill="#ffd9d9">Independent extension — not affiliated with MediaMarkt</text>
     <rect x="790" y="70" width="430" height="660" rx="28" fill="#fff" stroke="#ddd" stroke-width="2"/>
   `);

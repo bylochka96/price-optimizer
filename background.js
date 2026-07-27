@@ -6,8 +6,11 @@ const SETTINGS_VERSION = 3;
 const DEFAULT_SETTINGS = {
   settingsVersion: SETTINGS_VERSION,
   enabled: true,
-  targetCurrency: "EUR"
+  targetCurrency: "EUR",
+  uiLanguage: "en"
 };
+
+const UI_LANGUAGES = ["en", "tr"];
 
 const TARGET_CURRENCIES = [
   "USD", "EUR", "GBP", "RUB", "AZN", "KZT", "AED", "SAR", "CHF", "UAH", "BYN"
@@ -31,7 +34,10 @@ chrome.runtime.onInstalled.addListener(async () => {
       : DEFAULT_SETTINGS.enabled,
     targetCurrency: TARGET_CURRENCIES.includes(previous?.targetCurrency)
       ? previous.targetCurrency
-      : DEFAULT_SETTINGS.targetCurrency
+      : DEFAULT_SETTINGS.targetCurrency,
+    uiLanguage: UI_LANGUAGES.includes(previous?.uiLanguage)
+      ? previous.uiLanguage
+      : DEFAULT_SETTINGS.uiLanguage
   };
   await chrome.storage.sync.set({ [SETTINGS_KEY]: settings });
   await chrome.alarms.clear("disable-conversion");
@@ -83,9 +89,12 @@ async function getSettings() {
       : DEFAULT_SETTINGS.enabled,
     targetCurrency: TARGET_CURRENCIES.includes(raw?.targetCurrency)
       ? raw.targetCurrency
-      : DEFAULT_SETTINGS.targetCurrency
+      : DEFAULT_SETTINGS.targetCurrency,
+    uiLanguage: UI_LANGUAGES.includes(raw?.uiLanguage)
+      ? raw.uiLanguage
+      : DEFAULT_SETTINGS.uiLanguage
   };
-  if (!hasCurrentSettings || raw.enabled !== settings.enabled || raw.targetCurrency !== settings.targetCurrency) {
+  if (!hasCurrentSettings || raw.enabled !== settings.enabled || raw.targetCurrency !== settings.targetCurrency || raw.uiLanguage !== settings.uiLanguage) {
     await chrome.storage.sync.set({ [SETTINGS_KEY]: settings });
   }
   return settings;
@@ -98,7 +107,10 @@ async function saveSettings(patch) {
     enabled: typeof patch?.enabled === "boolean" ? patch.enabled : current.enabled,
     targetCurrency: TARGET_CURRENCIES.includes(patch?.targetCurrency)
       ? patch.targetCurrency
-      : current.targetCurrency
+      : current.targetCurrency,
+    uiLanguage: UI_LANGUAGES.includes(patch?.uiLanguage)
+      ? patch.uiLanguage
+      : current.uiLanguage
   };
   await chrome.storage.sync.set({ [SETTINGS_KEY]: next });
   return next;

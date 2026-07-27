@@ -18,6 +18,8 @@ jobs:
           node --check content.js
           node --check popup.js
           node -e "JSON.parse(require('fs').readFileSync('manifest.json','utf8')); JSON.parse(require('fs').readFileSync('banners.json','utf8')); JSON.parse(require('fs').readFileSync('docs/banners.json','utf8'));"
+          node tests/background-navigation.test.js
+          node tests/localization-settings.test.js
       - name: Build Chrome Web Store ZIP
         shell: pwsh
         run: ./scripts/build.ps1

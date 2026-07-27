@@ -2,7 +2,7 @@
 
 ## Package
 
-- [ ] Upload `dist/price-optimizer-2.2.0.zip`.
+- [ ] Upload `dist/price-optimizer-2.3.0.zip`.
 - [ ] Confirm `manifest.json` is at the ZIP root.
 - [ ] Confirm the version is greater than every previously uploaded version.
 - [ ] Install the exact ZIP unpacked and test on a MediaMarkt category and product page.
@@ -11,6 +11,7 @@
 
 - [ ] Copy the summary and detailed description from `store/listing.md`.
 - [ ] Select **Shopping** and **English**.
+- [ ] Optionally add the Turkish localized listing from `store/listing-tr.md`.
 - [ ] Upload `icons/icon128.png` as the 128×128 store icon.
 - [ ] Upload `store/assets/screenshot-1280x800.png`.
 - [ ] Upload `store/assets/small-promo-440x280.png`.

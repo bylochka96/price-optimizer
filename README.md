@@ -42,6 +42,7 @@ After a cross-domain tab navigation, the service worker verifies that the MediaM
 ## Popup and advertising
 
 - Conversion is enabled by default and remains under the user's manual control.
+- The popup can be switched between English and Turkish; the selected language is saved with the user's synchronized settings.
 - The popup uses a compact red, black, and white MediaMarkt-inspired visual system.
 - The current campaign is loaded from [GitHub Pages](https://bylochka96.github.io/price-optimizer/banners.json), with packaged `banners.json` as a validated fallback.
 - Closing the campaign stores one local two-hour dismissal.
@@ -49,6 +50,7 @@ After a cross-domain tab navigation, the service worker verifies that the MediaM
 - `backgroundImage` accepts an HTTPS URL or a safe local path under `assets/` or `images/`.
 - `backgroundPosition` controls image alignment and `backgroundOverlay` controls the white readability layer from `0` to `1`.
 - `buttonColor` controls the CTA button independently from the banner border.
+- Turkish campaign copy is read from optional `sponsor_TR`, `title_TR`, `body_TR`, `ctaLabel_TR`, and `url_TR` fields, with automatic fallback to English.
 
 ## Install locally
 

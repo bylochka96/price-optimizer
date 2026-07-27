@@ -4,13 +4,18 @@
     "id": "your-advertisement",
     "enabled": true,
     "sponsor": "Sponsored",
+    "sponsor_TR": "Sponsorlu",
     "title": "Your ad could be here",
+    "title_TR": "Reklamınız burada olabilir",
     "body": "Place a short description of the advertiser's offer here.",
+    "body_TR": "Reklamverenin teklifine ait kısa açıklamayı buraya ekleyin.",
     "ctaLabel": "Learn more",
+    "ctaLabel_TR": "Daha fazla bilgi",
     "url": "https://github.com/bylochka96/price-optimizer?utm_source=price_optimizer&utm_medium=extension&utm_campaign=mediamarkt_ad",
-    "backgroundImage": "images/neutral-banner-background.png",
+    "url_TR": "https://github.com/bylochka96/price-optimizer?utm_source=price_optimizer&utm_medium=extension&utm_campaign=mediamarkt_ad_tr",
+    "backgroundImage": "",
     "backgroundPosition": "center",
     "backgroundOverlay": 0.66,
-    "buttonColor": "#18864B"
+    "buttonColor": "#7C3AED"
   }
 }

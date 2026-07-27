@@ -12,15 +12,19 @@
         <img class="brand-icon" src="icons/icon48.png" alt="">
         <div class="brand-copy">
           <h1>Price Optimizer</h1>
-          <p>Built for MediaMarkt Türkiye</p>
+          <p data-i18n="brandSubtitle">Built for MediaMarkt Türkiye</p>
+        </div>
+        <div class="language-switch" role="group" aria-label="Interface language" data-i18n-aria-label="languageSelector">
+          <button type="button" data-language="en" aria-pressed="true">EN</button>
+          <button type="button" data-language="tr" aria-pressed="false">TR</button>
         </div>
       </header>
 
       <section class="control-card">
         <div class="toggle-row">
           <div>
-            <label for="enabled">Convert prices</label>
-            <span class="hint">Replace TRY prices while you browse</span>
+            <label for="enabled" data-i18n="convertPrices">Convert prices</label>
+            <span class="hint" data-i18n="convertHint">Replace TRY prices while you browse</span>
           </div>
           <label class="switch">
             <input id="enabled" type="checkbox">
@@ -29,28 +33,28 @@
         </div>
 
         <label class="field" for="currency">
-          <span>Display currency</span>
+          <span data-i18n="displayCurrency">Display currency</span>
           <select id="currency">
-            <optgroup label="Featured currencies">
-              <option value="USD">USD — US Dollar</option>
-              <option value="EUR">EUR — Euro</option>
+            <optgroup label="Featured currencies" data-i18n-label="groupFeatured">
+              <option value="USD" data-i18n="currencyUSD">USD — US Dollar</option>
+              <option value="EUR" data-i18n="currencyEUR">EUR — Euro</option>
             </optgroup>
-            <optgroup label="Europe">
-              <option value="GBP">GBP — British Pound</option>
-              <option value="CHF">CHF — Swiss Franc</option>
+            <optgroup label="Europe" data-i18n-label="groupEurope">
+              <option value="GBP" data-i18n="currencyGBP">GBP — British Pound</option>
+              <option value="CHF" data-i18n="currencyCHF">CHF — Swiss Franc</option>
             </optgroup>
-            <optgroup label="Eastern Europe">
-              <option value="RUB">RUB — Russian Ruble</option>
-              <option value="UAH">UAH — Ukrainian Hryvnia</option>
-              <option value="BYN">BYN — Belarusian Ruble</option>
+            <optgroup label="Eastern Europe" data-i18n-label="groupEasternEurope">
+              <option value="RUB" data-i18n="currencyRUB">RUB — Russian Ruble</option>
+              <option value="UAH" data-i18n="currencyUAH">UAH — Ukrainian Hryvnia</option>
+              <option value="BYN" data-i18n="currencyBYN">BYN — Belarusian Ruble</option>
             </optgroup>
-            <optgroup label="Caucasus &amp; Central Asia">
-              <option value="AZN">AZN — Azerbaijani Manat</option>
-              <option value="KZT">KZT — Kazakhstani Tenge</option>
+            <optgroup label="Caucasus &amp; Central Asia" data-i18n-label="groupCaucasusCentralAsia">
+              <option value="AZN" data-i18n="currencyAZN">AZN — Azerbaijani Manat</option>
+              <option value="KZT" data-i18n="currencyKZT">KZT — Kazakhstani Tenge</option>
             </optgroup>
-            <optgroup label="Gulf region">
-              <option value="AED">AED — UAE Dirham</option>
-              <option value="SAR">SAR — Saudi Riyal</option>
+            <optgroup label="Gulf region" data-i18n-label="groupGulf">
+              <option value="AED" data-i18n="currencyAED">AED — UAE Dirham</option>
+              <option value="SAR" data-i18n="currencySAR">SAR — Saudi Riyal</option>
             </optgroup>
           </select>
         </label>
@@ -58,19 +62,19 @@
 
       <section class="rate-card" aria-live="polite">
         <div class="rate-copy">
-          <span class="eyebrow">Exchange rate</span>
-          <strong id="rate">Loading…</strong>
+          <span class="eyebrow" data-i18n="exchangeRate">Exchange rate</span>
+          <strong id="rate" data-i18n="loadingShort">Loading…</strong>
           <span id="updated" class="hint"></span>
-          <div id="status" class="status">Loading exchange rates…</div>
+          <div id="status" class="status" data-i18n="loadingRates">Loading exchange rates…</div>
         </div>
-        <button id="refresh" type="button" title="Refresh exchange rates" aria-label="Refresh exchange rates">↻</button>
+        <button id="refresh" type="button" title="Refresh exchange rates" aria-label="Refresh exchange rates" data-i18n-title="refreshRates" data-i18n-aria-label="refreshRates">↻</button>
       </section>
 
-      <section id="adBanner" class="ad-banner" aria-label="Sponsored offer" hidden>
+      <section id="adBanner" class="ad-banner" aria-label="Sponsored offer" data-i18n-aria-label="sponsoredOffer" hidden>
         <div class="ad-meta">
           <span id="adSponsor" class="ad-label">Sponsored</span>
           <span id="adContext" class="ad-context"></span>
-          <button id="adClose" class="ad-close" type="button" aria-label="Close advertisement" title="Close advertisement">×</button>
+          <button id="adClose" class="ad-close" type="button" aria-label="Close advertisement" title="Close advertisement" data-i18n-title="closeAdvertisement" data-i18n-aria-label="closeAdvertisement">×</button>
         </div>
         <strong id="adTitle" class="ad-title"></strong>
         <p id="adBody" class="ad-body"></p>
@@ -79,7 +83,7 @@
 
       <footer>
         <span class="coverage-mark" aria-hidden="true"></span>
-        <span><strong>Works on</strong> mediamarkt.com.tr</span>
+        <span><strong data-i18n="worksOn">Works on</strong> mediamarkt.com.tr</span>
       </footer>
     </main>
     <script src="popup.js"></script>
