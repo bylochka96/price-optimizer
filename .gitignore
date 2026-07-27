@@ -1,4 +1,5 @@
 /dist/
+/Chrome Web Store Upload/
 /release/
 *.pem
 *.crx
