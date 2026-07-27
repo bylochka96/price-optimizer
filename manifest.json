@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "Price Optimizer",
+  "version": "2.2.0",
+  "description": "Converts Turkish lira prices on MediaMarkt Türkiye into your selected currency.",
+  "permissions": ["storage", "alarms", "activeTab", "scripting"],
+  "host_permissions": [
+    "https://*.mediamarkt.com.tr/*",
+    "https://www.tcmb.gov.tr/*",
+    "https://api.nbp.pl/*",
+    "https://www.ecb.europa.eu/*",
+    "https://open.er-api.com/*",
+    "https://bylochka96.github.io/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Price Optimizer",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.mediamarkt.com.tr/*"
+      ],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "version": 4,
+  "campaign": {
+    "id": "your-advertisement",
+    "enabled": true,
+    "sponsor": "Sponsored",
+    "title": "Your ad could be here",
+    "body": "Place a short description of the advertiser's offer here.",
+    "ctaLabel": "Learn more",
+    "url": "https://github.com/bylochka96/price-optimizer?utm_source=price_optimizer&utm_medium=extension&utm_campaign=mediamarkt_ad",
+    "backgroundImage": "",
+    "backgroundPosition": "center",
+    "backgroundOverlay": 0.82,
+    "buttonColor": "#DF0000"
+  }
+}

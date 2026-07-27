@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Price Optimizer</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <img class="brand-icon" src="icons/icon48.png" alt="">
+        <div class="brand-copy">
+          <h1>Price Optimizer</h1>
+          <p>Built for MediaMarkt Türkiye</p>
+        </div>
+      </header>
+
+      <section class="control-card">
+        <div class="toggle-row">
+          <div>
+            <label for="enabled">Convert prices</label>
+            <span class="hint">Replace TRY prices while you browse</span>
+          </div>
+          <label class="switch">
+            <input id="enabled" type="checkbox">
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <label class="field" for="currency">
+          <span>Display currency</span>
+          <select id="currency">
+            <optgroup label="Featured currencies">
+              <option value="USD">USD — US Dollar</option>
+              <option value="EUR">EUR — Euro</option>
+            </optgroup>
+            <optgroup label="Europe">
+              <option value="GBP">GBP — British Pound</option>
+              <option value="CHF">CHF — Swiss Franc</option>
+            </optgroup>
+            <optgroup label="Eastern Europe">
+              <option value="RUB">RUB — Russian Ruble</option>
+              <option value="UAH">UAH — Ukrainian Hryvnia</option>
+              <option value="BYN">BYN — Belarusian Ruble</option>
+            </optgroup>
+            <optgroup label="Caucasus &amp; Central Asia">
+              <option value="AZN">AZN — Azerbaijani Manat</option>
+              <option value="KZT">KZT — Kazakhstani Tenge</option>
+            </optgroup>
+            <optgroup label="Gulf region">
+              <option value="AED">AED — UAE Dirham</option>
+              <option value="SAR">SAR — Saudi Riyal</option>
+            </optgroup>
+          </select>
+        </label>
+      </section>
+
+      <section class="rate-card" aria-live="polite">
+        <div class="rate-copy">
+          <span class="eyebrow">Exchange rate</span>
+          <strong id="rate">Loading…</strong>
+          <span id="updated" class="hint"></span>
+          <div id="status" class="status">Loading exchange rates…</div>
+        </div>
+        <button id="refresh" type="button" title="Refresh exchange rates" aria-label="Refresh exchange rates">↻</button>
+      </section>
+
+      <section id="adBanner" class="ad-banner" aria-label="Sponsored offer" hidden>
+        <div class="ad-meta">
+          <span id="adSponsor" class="ad-label">Sponsored</span>
+          <span id="adContext" class="ad-context"></span>
+          <button id="adClose" class="ad-close" type="button" aria-label="Close advertisement" title="Close advertisement">×</button>
+        </div>
+        <strong id="adTitle" class="ad-title"></strong>
+        <p id="adBody" class="ad-body"></p>
+        <a id="adCta" class="ad-cta" href="#" target="_blank" rel="sponsored noopener noreferrer" hidden></a>
+      </section>
+
+      <footer>
+        <span class="coverage-mark" aria-hidden="true"></span>
+        <span><strong>Works on</strong> mediamarkt.com.tr</span>
+      </footer>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

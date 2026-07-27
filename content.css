@@ -1,0 +1,11 @@
+/* Prices keep the site's own typography and layout. This class is reserved for future site-specific fixes. */
+.turkish-converter-price {
+  font: inherit;
+  color: inherit;
+}
+
+.price-optimizer-hide-try-before::before,
+.price-optimizer-hide-try-after::after {
+  content: none !important;
+  display: none !important;
+}

@@ -1,0 +1,6 @@
+/dist/
+/release/
+*.pem
+*.crx
+.DS_Store
+Thumbs.db

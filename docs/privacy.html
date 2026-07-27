@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Price Optimizer Privacy Policy</title>
+  <meta name="description" content="Privacy policy for the Price Optimizer browser extension.">
+  <style>
+    :root { font-family: Inter, system-ui, sans-serif; color: #171717; background: #f4f4f4; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    header { padding: 28px 20px; color: #fff; background: #df0000; }
+    header div, main { width: min(820px, 100%); margin: auto; }
+    h1 { margin: 0; font-size: clamp(26px, 5vw, 40px); }
+    header p { margin: 8px 0 0; opacity: .88; }
+    main { margin-top: 24px; margin-bottom: 40px; padding: 26px; border: 1px solid #ddd; border-radius: 14px; background: #fff; }
+    h2 { margin-top: 28px; font-size: 19px; }
+    p, li { color: #444; line-height: 1.65; }
+    a { color: #bd0000; }
+    .date { color: #666; font-weight: 650; }
+  </style>
+</head>
+<body>
+  <header><div><h1>Price Optimizer Privacy Policy</h1><p>Browser extension for MediaMarkt Türkiye price conversion</p></div></header>
+  <main>
+    <p class="date">Effective date: July 27, 2026</p>
+    <p>Price Optimizer converts Turkish lira prices displayed on MediaMarkt Türkiye into a currency selected by the user. This policy explains the limited data processing required to provide that feature.</p>
+
+    <h2>Data processed locally</h2>
+    <p>Price Optimizer reads visible price text on <code>mediamarkt.com.tr</code> and replaces matching TRY values locally. Product names, prices, page contents, URLs, and browsing history are not sent to the developer or advertisers.</p>
+    <p>The extension stores whether conversion is enabled, the selected currency, cached exchange rates, and the expiration time of a dismissed sponsored banner. These settings remain in Chrome extension storage or Chrome Sync until changed, cleared, or the extension is removed.</p>
+
+    <h2>Network requests</h2>
+    <p>The extension makes HTTPS requests to the Central Bank of the Republic of Türkiye, Narodowy Bank Polski, the European Central Bank, and ExchangeRate-API for exchange rates, and to this GitHub Pages site for sponsored-banner configuration and an optional image.</p>
+    <p>Those services may receive standard network metadata such as IP address, user agent, request time, and requested resource. Price Optimizer does not add a persistent identifier, product information, page URL, or browsing history to these requests.</p>
+
+    <h2>Sponsored banner</h2>
+    <p>The popup may show a clearly labeled contextual sponsored banner. It is not selected using browsing history, product data, behavioral profiling, or personal information. An advertiser's site opens only after a click. Campaign-level UTM parameters do not contain a user identifier or the MediaMarkt page being viewed.</p>
+
+    <h2>Collection, sharing, and sale</h2>
+    <p>Price Optimizer does not collect analytics, build user profiles, sell personal information, or share page content or browsing activity with the developer or advertisers.</p>
+
+    <h2>Security and retention</h2>
+    <p>All network requests use HTTPS. Remote banner configuration is validated data and is never executed as JavaScript or HTML. Locally stored settings remain until the user changes them, clears extension data, or removes the extension.</p>
+
+    <h2>Children's privacy</h2>
+    <p>Price Optimizer is not directed to children and does not knowingly collect personal information from children.</p>
+
+    <h2>Changes and contact</h2>
+    <p>Material changes will be published here with a revised effective date. Questions can be submitted through the <a href="https://github.com/bylochka96/price-optimizer/issues">GitHub issue tracker</a>.</p>
+
+    <h2>Chrome Web Store Limited Use</h2>
+    <p>Price Optimizer's use of information obtained through Chrome APIs complies with the Chrome Web Store User Data Policy, including the Limited Use requirements. Information is used only to provide or improve the extension's single user-facing purpose and is not used for personalized advertising.</p>
+  </main>
+</body>
+</html>
