@@ -2,7 +2,7 @@
 
 ## Package
 
-- [ ] Upload `dist/price-optimizer-2.3.0.zip`.
+- [ ] Upload `dist/price-optimizer-2.3.1.zip`.
 - [ ] Confirm `manifest.json` is at the ZIP root.
 - [ ] Confirm the version is greater than every previously uploaded version.
 - [ ] Install the exact ZIP unpacked and test on a MediaMarkt category and product page.

@@ -4,10 +4,6 @@
 
 Stores the user's conversion toggle and selected currency, caches exchange rates, and remembers a locally dismissed sponsored banner. No page content is stored.
 
-## `alarms`
-
-Refreshes cached exchange-rate data periodically so converted values stay reasonably current.
-
 ## `activeTab`
 
 Allows the popup, after a user click, to determine whether the current tab is MediaMarkt and show the relevant contextual banner. The active tab's URL is not transmitted or retained.

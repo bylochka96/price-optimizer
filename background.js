@@ -40,18 +40,10 @@ chrome.runtime.onInstalled.addListener(async () => {
       : DEFAULT_SETTINGS.uiLanguage
   };
   await chrome.storage.sync.set({ [SETTINGS_KEY]: settings });
-  await chrome.alarms.clear("disable-conversion");
-  chrome.alarms.create("refresh-rates", { periodInMinutes: 360 });
   try {
     await getRates(true);
   } catch (error) {
     console.warn("Price Optimizer: initial rate update failed", error);
-  }
-});
-
-chrome.alarms.onAlarm.addListener(async (alarm) => {
-  if (alarm.name === "refresh-rates") {
-    getRates(true).catch((error) => console.warn("Rate refresh failed", error));
   }
 });
 

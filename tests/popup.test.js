@@ -17,7 +17,7 @@ const { pathToFileURL } = require("node:url");
           ok: true,
           settings: { enabled: true, targetCurrency: "EUR", uiLanguage: "en" },
           rates: { EUR: 0.02 },
-          updatedAt: Date.now(),
+          updatedAt: Date.UTC(2026, 6, 27, 12, 0),
           sources: ["Central Bank of the Republic of Türkiye", "Narodowy Bank Polski"],
           stale: false
         })

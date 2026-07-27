@@ -21,11 +21,6 @@ const vm = require("node:vm");
       onInstalled: { addListener() {} },
       onMessage: { addListener() {} }
     },
-    alarms: {
-      onAlarm: { addListener() {} },
-      clear: async () => {},
-      create() {}
-    },
     storage: { sync: {}, local: {} }
   };
 
