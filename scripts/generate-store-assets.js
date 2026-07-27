@@ -40,11 +40,11 @@ async function buildScreenshot() {
     <rect x="790" y="70" width="430" height="660" rx="28" fill="#fff" stroke="#ddd" stroke-width="2"/>
   `);
   const popup = await sharp(path.join(root, "assets", "popup-preview.png")).resize(390, 600).png().toBuffer();
-  const icon = await sharp(path.join(root, "icons", "icon128.png")).resize(112, 112).png().toBuffer();
+  const icon = await sharp(path.join(root, "assets", "icon-master.png")).resize(112, 112).png().toBuffer();
   await sharp(base).composite([
     { input: icon, left: 58, top: 60 },
     { input: popup, left: 810, top: 100 }
-  ]).png().toFile(path.join(output, "screenshot-1280x800.png"));
+  ]).removeAlpha().png().toFile(path.join(output, "screenshot-1280x800.png"));
 }
 
 async function buildSmallPromo() {
@@ -55,8 +55,8 @@ async function buildSmallPromo() {
     <text class="ui" x="198" y="164" fill="#fff" font-size="31" font-weight="800">Optimizer</text>
     <text class="ui" x="198" y="200" fill="#ffd8d8" font-size="19" font-weight="600">₺  →  $  €  £</text>
   `);
-  const icon = await sharp(path.join(root, "icons", "icon128.png")).resize(126, 126).png().toBuffer();
-  await sharp(base).composite([{ input: icon, left: 39, top: 77 }]).png().toFile(path.join(output, "small-promo-440x280.png"));
+  const icon = await sharp(path.join(root, "assets", "icon-master.png")).resize(126, 126).png().toBuffer();
+  await sharp(base).composite([{ input: icon, left: 39, top: 77 }]).removeAlpha().png().toFile(path.join(output, "small-promo-440x280.png"));
 }
 
 async function buildMarquee() {
@@ -67,8 +67,8 @@ async function buildMarquee() {
     <text class="ui" x="505" y="315" fill="#ffd8d8" font-size="35" font-weight="600">MediaMarkt TRY prices in your currency</text>
     <text class="ui" x="505" y="388" fill="#fff" font-size="40" font-weight="700">₺  →  $  €  £  ₽  ₼  ₸  ₴</text>
   `);
-  const icon = await sharp(path.join(root, "icons", "icon128.png")).resize(286, 286).png().toBuffer();
-  await sharp(base).composite([{ input: icon, left: 107, top: 137 }]).png().toFile(path.join(output, "marquee-1400x560.png"));
+  const icon = await sharp(path.join(root, "assets", "icon-master.png")).resize(286, 286).png().toBuffer();
+  await sharp(base).composite([{ input: icon, left: 107, top: 137 }]).removeAlpha().png().toFile(path.join(output, "marquee-1400x560.png"));
 }
 
 Promise.all([buildScreenshot(), buildSmallPromo(), buildMarquee()])
