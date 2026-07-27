@@ -22,6 +22,7 @@ foreach ($file in $files) {
   Copy-Item -LiteralPath (Join-Path $projectRoot $file) -Destination (Join-Path $stageRoot $file)
 }
 Copy-Item -LiteralPath (Join-Path $projectRoot "icons") -Destination (Join-Path $stageRoot "icons") -Recurse
+Copy-Item -LiteralPath (Join-Path $projectRoot "images") -Destination (Join-Path $stageRoot "images") -Recurse
 
 Compress-Archive -Path (Join-Path $stageRoot "*") -DestinationPath $archivePath -CompressionLevel Optimal
 Remove-Item -LiteralPath $stageRoot -Recurse -Force

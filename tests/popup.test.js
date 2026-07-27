@@ -36,10 +36,10 @@ const { pathToFileURL } = require("node:url");
         body: "Place a short description of the advertiser's offer here.",
         ctaLabel: "Learn more",
         url: "https://example.com/",
-        backgroundImage: "assets/icon-master.png",
-        backgroundPosition: "center right",
-        backgroundOverlay: 0.82,
-        buttonColor: "#2457E6"
+        backgroundImage: "images/neutral-banner-background.png",
+        backgroundPosition: "center",
+        backgroundOverlay: 0.66,
+        buttonColor: "#18864B"
       });
     });
 
@@ -54,8 +54,8 @@ const { pathToFileURL } = require("node:url");
       throw new Error(`Popup is clipped: ${JSON.stringify(layout)}`);
     }
     if (layout.bannerBorderTop !== "1px") throw new Error(`Unexpected banner border: ${layout.bannerBorderTop}`);
-    if (layout.buttonColor !== "rgb(36, 87, 230)") throw new Error(`Unexpected CTA color: ${layout.buttonColor}`);
-    if (!layout.backgroundImage.includes("icon-master.png")) throw new Error("Banner background image was not applied");
+    if (layout.buttonColor !== "rgb(24, 134, 75)") throw new Error(`Unexpected CTA color: ${layout.buttonColor}`);
+    if (!layout.backgroundImage.includes("neutral-banner-background.png")) throw new Error("Banner background image was not applied");
     await page.screenshot({ path: path.join(__dirname, "..", "assets", "popup-preview.png") });
     console.log(`Popup layout test passed (${layout.height}px)`);
   } finally {
